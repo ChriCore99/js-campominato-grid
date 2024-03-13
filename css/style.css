@@ -20,6 +20,39 @@ a {
 
 /* STYLE */
 
+header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: blue;
+    border: 2px splid black;
+    color: white;
+}
+
+.btn {
+    cursor: pointer;
+}
+
+main {
+    background-color: greenyellow;
+}
+
+section {
+    width: 1000px;
+    aspect-ratio: 1 /1;
+    margin: 0 auto;
+}
+
+.griglia {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+}
+
+.cella {
+    aspect-ratio: 1 / 1;
+    border: 1px solid black;
+}
+
 /* UTILITIES */
 
 /* DEBUG */
