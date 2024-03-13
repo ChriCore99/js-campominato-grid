@@ -53,6 +53,10 @@ section {
     border: 1px solid black;
 }
 
+.bg-blu {
+    background-color: blue;
+}
+
 /* UTILITIES */
 
 /* DEBUG */
