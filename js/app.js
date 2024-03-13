@@ -2,18 +2,32 @@
 
 const bottone = document.querySelector('.btn');
 
+const elementoSelect = document.getElementById('select')
+
 bottone.addEventListener('click', function(){
     const grigliaGrid = document.querySelector('.griglia');
-    const elementiRiga = 10;
+    let elementiRiga;
+
+    if (elementoSelect.value === 'facile'){
+        elementiRiga = 10;
+        grigliaGrid.classList.add('facile');
+    } else if (elementoSelect.value === 'medio'){
+        elementiRiga = 9;
+        grigliaGrid.classList.add('medio');
+    } else {
+        elementiRiga = 7;
+        grigliaGrid.classList.add('difficile');
+    }
+
     const numeroElementi = elementiRiga * elementiRiga;
 
     for(let i = 0; i < numeroElementi; i++){
         const numeri = i + 1;
 
-        const elementoCella = document.createElement('div'); // creo l'elemento div per la cella
-        elementoCella.className = 'cella';                   // dò al div la classe cella
-        elementoCella.innerHTML = numeri;                    // inserisco in ogni cella un  umero
-        grigliaGrid.append(elementoCella);                   // inserisco la cella nella griglia
+        const elementoCella = document.createElement('div');   // creo l'elemento div per la cella
+        elementoCella.className = 'cella';                     // dò al div la classe cella
+        elementoCella.innerHTML = numeri;                      // inserisco in ogni cella un  umero
+        grigliaGrid.append(elementoCella);                     // inserisco la cella nella griglia
 
         elementoCella.addEventListener('click', function(){
             elementoCella.classList.toggle('bg-blu');
